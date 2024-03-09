@@ -578,6 +578,15 @@ pathed_env_vars = [
     "*PATH"
 ]
 
+# This setting works in pair with "path_env_vars" to specify variables
+# that should not be considered as path, and so on, that should not be converted
+# for the current OS.
+# A great example is CMAKE_MODULE_PATH which expects a path with forward slashes.
+# However, if running on Windows, CMAKE_MODULE_PATH will match "*PATH" pattern above
+# and will be converted with non-working backslashes.
+# This setting supports wildcards.
+pathed_env_vars_exceptions = []
+
 # Defines what suites on ``$PATH`` stay visible when a new rez environment is resolved.
 # Possible values are:
 #

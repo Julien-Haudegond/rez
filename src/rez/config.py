@@ -380,6 +380,7 @@ config_schema = Schema({
     "release_hooks":                                StrList,
     "context_tracking_context_fields":              StrList,
     "pathed_env_vars":                              StrList,
+    "pathed_env_vars_exceptions":                   StrList,
     "prompt_release_message":                       Bool,
     "critical_styles":                              OptionalStrList,
     "error_styles":                                 OptionalStrList,
